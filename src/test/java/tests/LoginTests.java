@@ -1,5 +1,6 @@
 package tests;
 
+import com.oracle.tools.packager.mac.MacAppBundler;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,11 +13,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 //Login tests are maintained here
 //without Page object approach
 public class LoginTests {
     WebDriver driver;
+
+    Map<String,String> myMap = new HashMap<>();
 
     @BeforeMethod
     public void setUo(){
